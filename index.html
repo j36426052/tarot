@@ -5,7 +5,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Q蛇塔羅線上抽牌</title>
+	<title>塔羅線上抽牌</title>
 </head>
 
 
@@ -15,13 +15,39 @@
 
 
 
-	<p id="p1">Hello World!</p>
-	<img id = "pic0" src="a.png" with="60">
-	<img id = "pic1" src="a.png" with="60">
-	<img id = "pic2" src="a.png" with="60">
-	<img id = "pic3" src="a.png" with="60">
-	<img id = "pic4" src="a.png" with="60">
-	<p></p>
+	
+
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td><table width="90%" border="0" align="center" cellpadding="0" cellspacing="5">
+        <tbody><tr> 
+          <td width="150" bgcolor="#05c1f5" onmouseover="pviiW3Cbg(this, '#05c1f5')" onmouseout="pviiW3Cbg(this, '#05c1f5')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(1)">一張牌陣</a></font></div></td>
+          <td width="150" bgcolor="#CC6600" onmouseover="pviiW3Cbg(this, '#993366')" onmouseout="pviiW3Cbg(this, '#CC6600')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(3)">三張牌陣</a></font></div></td>
+          <td width="150" bgcolor="#CC6600" onmouseover="pviiW3Cbg(this, '#666699')" onmouseout="pviiW3Cbg(this, '#CC6600')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(4)">四張牌陣</a></font></div></td>
+          <td width="150" bgcolor="#CC6600" onmouseover="pviiW3Cbg(this, '#FF6666')" onmouseout="pviiW3Cbg(this, '#CC6600')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(5)">五張牌陣</a></font></div></td>
+          <td width="150" bgcolor="#CC6600" onmouseover="pviiW3Cbg(this, '#669966')" onmouseout="pviiW3Cbg(this, '#CC6600')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(7)">七張牌陣</a></font></div></td>
+          <td width="150" bgcolor="#CC6600" onmouseover="pviiW3Cbg(this, '#CC9933')" onmouseout="pviiW3Cbg(this, '#CC6600')" style="background-color: rgb(0, 154, 196);"><div align="center"><font color="#FFFFFF"><a target="mainFrame" onclick="Drawing(9)">九張牌陣</a></font></div></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+
+
+	<table width="20%" border="0" align="center" cellpadding="0" cellspacing="5">
+	<td align="center"><img id = "pic0" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic1" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic2" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic3" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic4" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic5" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic6" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic7" src="a.png" width="120"></td>
+	<td align="center"><img id = "pic8" src="a.png" width="120"></td>
+	</table>
+
+	<table align="center"><td align="center"><p id="p1">占卜序號</p></td></table>
 
 	<script type="text/javascript">
 
@@ -43,9 +69,9 @@
   				obj.src = s;
 			}
 
-			if(newdata.length/2 < 5){
+			if(newdata.length/2 < 9){
 				var ll = (newdata.length/2);
-				var dd = 5 - ll;
+				var dd = 9 - ll;
 				for(ss = 0;ss<dd;ss++){
 					var temm = ll + ss;
 					console.log(temm);
@@ -71,9 +97,9 @@
   				obj.src = s;
 			}
 
-			if(newdata.length/2 < 5){
+			if(newdata.length/2 < 9){
 				var ll = (newdata.length/2);
-				var dd = 5 - ll;
+				var dd = 9 - ll;
 				for(ss = 0;ss<dd;ss++){
 					var temm = ll + ss;
 					console.log(temm);
@@ -131,24 +157,27 @@
 				}
 			}
 
-			document.getElementById("p1").innerHTML=answer;
+			document.getElementById("p1").innerHTML="本次占卜序號"+answer;
 			convert(answer);
 
 
 			}
 	</script>
 
-	<button onclick="Drawing(1)" style="background-image:url(a.png);width:80px;height:25px;"></button>
+	<!---<button onclick="Drawing(1)" style="background-image:url(a.png);width:80px;height:25px;"></button>
 	<button onclick="Drawing(3)" style="background-image:url(a.png);width:80px;height:25px;"></button>
-	<button onclick="Drawing(5)" style="background-image:url(a.png);width:80px;height:25px;"></button>
+	<button onclick="Drawing(5)" style="background-image:url(a.png);width:80px;height:25px;"></button>-->
 
 	<p></p>
 
-	<form name="form" id="form">
-		<input type="text" name="cards" id="cards">
-		<input type="button" name="submit" value="送出" onclick="convert2()">
-		
-	</form>
+	<table align="center">
+		<form name="form" id="form" >
+			<td align="center"><label>輸入占卜序號</label></td>
+			<td align="center"><input type="text" name="cards" id="cards"></td>
+			<td align="center"><input type="button" name="submit" value="送出" onclick="convert2()"></td>
+		</form>	
+	</table>
+	
 
 
 	
